@@ -1,0 +1,3130 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Chapter 20 — My Ammu ❤️</title>
+
+<!-- =========================================================
+     GOOGLE FONTS
+     ========================================================= -->
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   =========================================================
+   IMPORTANT EDITING AREA
+   =========================================================
+
+   💗 YOUR PET NAMES:
+      Ammu
+      Paa
+      Thangoo
+
+   📅 PROPOSAL DATE:
+      30/12/2024
+
+   📸 PHOTOS:
+      photo.png.jpeg
+      photo(1).png.jpeg
+
+   🎵 OPTIONAL MUSIC:
+      birthday-song.mp3
+
+   You only need to put these files in the SAME folder
+   as this index.html file.
+
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    background: #070509;
+
+    color: white;
+
+    font-family: "Inter", sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   CINEMATIC BACKGROUND
+   ========================================================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 50, 140, .14),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(140, 50, 255, .14),
+            transparent 30%
+        );
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   INTRO SCREEN
+   ========================================================= */
+
+#intro {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #42132f 0%,
+            #180914 40%,
+            #050407 100%
+        );
+
+    z-index: 99999;
+
+    transition:
+
+        opacity 1.2s ease,
+
+        visibility 1.2s ease;
+}
+
+#intro.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+}
+
+.intro-content {
+
+    width: min(90%, 700px);
+}
+
+.intro-small {
+
+    font-size: 12px;
+
+    letter-spacing: 6px;
+
+    color: #ff8abd;
+
+    margin-bottom: 25px;
+}
+
+.intro-content h1 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(65px, 13vw, 150px);
+
+    line-height: .85;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ff77b7,
+            #fff,
+            #bd8cff
+        );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+.intro-content h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(30px, 5vw, 48px);
+
+    margin-top: 20px;
+}
+
+.intro-content p {
+
+    color: #bcb3bd;
+
+    margin: 25px auto 35px;
+
+    line-height: 1.8;
+
+    max-width: 520px;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.main-btn {
+
+    border: none;
+
+    padding: 16px 35px;
+
+    border-radius: 50px;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff3f91,
+            #9c52ff
+        );
+
+    box-shadow:
+
+        0 0 30px
+        rgba(255, 61, 148, .35);
+
+    transition: .35s;
+}
+
+.main-btn:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+
+        0 0 50px
+        rgba(255, 61, 148, .55);
+}
+
+
+/* =========================================================
+   MAIN WEBSITE
+   ========================================================= */
+
+#main {
+
+    display: none;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+section {
+
+    min-height: 100vh;
+
+    padding:
+        100px 7%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+.section-label {
+
+    color: #ff79b7;
+
+    letter-spacing: 5px;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+.section-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(42px, 7vw, 80px);
+
+    text-align: center;
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+
+    color: #aaa;
+
+    text-align: center;
+
+    max-width: 650px;
+
+    line-height: 1.8;
+
+    margin-bottom: 55px;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(255, 40, 130, .16),
+            transparent 45%
+        );
+}
+
+.hero-number {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(150px, 28vw, 360px);
+
+    line-height: .7;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #fff,
+            #ff72b3,
+            #8e52ff
+        );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    animation:
+        glow 3s infinite alternate;
+}
+
+@keyframes glow {
+
+    from {
+
+        filter:
+            drop-shadow(
+                0 0 10px
+                rgba(255,80,160,.2)
+            );
+    }
+
+    to {
+
+        filter:
+            drop-shadow(
+                0 0 45px
+                rgba(255,80,160,.55)
+            );
+    }
+}
+
+.hero h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(28px, 5vw, 55px);
+
+    margin-top: 30px;
+}
+
+.hero p {
+
+    max-width: 700px;
+
+    color: #bbb;
+
+    line-height: 1.9;
+
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   TAMIL
+   ========================================================= */
+
+.tamil {
+
+    font-family:
+        "Noto Sans Tamil",
+        sans-serif;
+
+    color: #ffacd2;
+
+    font-size:
+        clamp(22px, 4vw, 38px);
+
+    margin-top: 25px;
+
+    text-shadow:
+        0 0 25px
+        rgba(255,100,180,.35);
+}
+
+
+/* =========================================================
+   PHOTO MEMORIES
+   ========================================================= */
+
+.photos {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #09060a,
+            #120914,
+            #09060a
+        );
+}
+
+.photo-grid {
+
+    width:
+        min(100%, 1050px);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 40px;
+}
+
+.photo-card {
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    padding: 12px;
+
+    border-radius: 25px;
+
+    backdrop-filter:
+        blur(15px);
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.45);
+
+    transition:
+        transform .5s ease,
+        box-shadow .5s ease;
+}
+
+.photo-card:first-child {
+
+    transform:
+        rotate(-2deg);
+}
+
+.photo-card:last-child {
+
+    transform:
+        rotate(2deg);
+}
+
+.photo-card:hover {
+
+    transform:
+        rotate(0deg)
+        translateY(-15px)
+        scale(1.02);
+
+    box-shadow:
+        0 40px 100px
+        rgba(255,70,150,.2);
+}
+
+.photo-card img {
+
+    width: 100%;
+
+    height: 480px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    display: block;
+}
+
+.photo-caption {
+
+    text-align: center;
+
+    padding:
+        20px 10px 10px;
+
+    color: #e8c8d8;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   20 REASONS
+   ========================================================= */
+
+.reasons-section {
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(130,40,100,.15),
+            transparent 60%
+        );
+}
+
+.reason-grid {
+
+    width:
+        min(100%, 1100px);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.reason {
+
+    min-height: 155px;
+
+    padding: 25px 18px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    transition: .4s;
+
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+}
+
+.reason.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+.reason:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(255,95,160,.6);
+
+    background:
+        rgba(255,70,150,.08);
+
+    box-shadow:
+        0 15px 50px
+        rgba(255,50,150,.1);
+}
+
+.reason-number {
+
+    color: #ff69ad;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    margin-bottom: 12px;
+}
+
+.reason-text {
+
+    color: #ddd;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.timeline-section {
+
+    background: #09070b;
+}
+
+.timeline {
+
+    width:
+        min(100%, 850px);
+
+    position: relative;
+}
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 2px;
+
+    background:
+
+        linear-gradient(
+            #ff4c9a,
+            #8e55ff,
+            transparent
+        );
+}
+
+.memory {
+
+    position: relative;
+
+    margin-bottom: 35px;
+
+    margin-left: 60px;
+
+    padding: 28px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    backdrop-filter:
+        blur(10px);
+}
+
+.memory::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -49px;
+
+    top: 30px;
+
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 50%;
+
+    background: #ff5aa5;
+
+    box-shadow:
+        0 0 25px
+        #ff5aa5;
+}
+
+.memory h3 {
+
+    color: #ff91c1;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+.memory p {
+
+    color: #bbb;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   PROPOSAL
+   ========================================================= */
+
+.proposal {
+
+    min-height: 100vh;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(255,30,120,.18),
+            transparent 50%
+        );
+}
+
+.proposal-heart {
+
+    font-size: 90px;
+
+    animation:
+        heartbeat 1.4s infinite;
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+
+        transform:
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            scale(1.18);
+    }
+}
+
+.proposal h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(45px, 8vw, 90px);
+
+    margin: 20px 0;
+}
+
+.proposal p {
+
+    color: #bbb;
+
+    max-width: 650px;
+
+    line-height: 1.9;
+
+    margin-bottom: 40px;
+}
+
+.proposal-date {
+
+    color: #ff91c1;
+
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.proposal-buttons {
+
+    display: flex;
+
+    gap: 25px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    min-height: 100px;
+
+    width: 100%;
+}
+
+.yes-btn {
+
+    border: none;
+
+    padding: 17px 45px;
+
+    border-radius: 50px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ff3f91,
+            #b052ff
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 30px
+        rgba(255,50,150,.35);
+
+    transition: .3s;
+}
+
+.yes-btn:hover {
+
+    transform:
+        scale(1.1);
+}
+
+.no-btn {
+
+    padding:
+        15px 35px;
+
+    border-radius: 50px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    background:
+        rgba(255,255,255,.05);
+
+    color: #ddd;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition: .2s;
+}
+
+#proposalMessage {
+
+    margin-top: 30px;
+
+    color: #ff9dc8;
+
+    font-size: 23px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    min-height: 35px;
+}
+
+
+/* =========================================================
+   LETTER
+   ========================================================= */
+
+.letter-section {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #09070b,
+            #130914
+        );
+}
+
+.letter-card {
+
+    width:
+        min(90%, 700px);
+
+    background:
+        rgba(255,248,252,.97);
+
+    color: #251620;
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 30px 100px
+        rgba(255,50,150,.15);
+
+    cursor: pointer;
+
+    transition: .5s;
+}
+
+.letter-card:hover {
+
+    transform:
+        translateY(-10px)
+        rotate(-1deg);
+}
+
+.letter-card h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 38px;
+
+    margin-bottom: 25px;
+}
+
+.letter-cover {
+
+    text-align: center;
+
+    color: #8e405f;
+}
+
+.letter-cover p {
+
+    line-height: 1.7;
+}
+
+.letter-content {
+
+    display: none;
+
+    line-height: 2;
+
+    color: #4d3340;
+}
+
+.letter-content.open {
+
+    display: block;
+
+    animation:
+        letterOpen 1s ease;
+}
+
+@keyframes letterOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+
+.final {
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #40132f,
+            #08060b 65%
+        );
+}
+
+.final-heart {
+
+    font-size: 100px;
+
+    animation:
+        heartbeat 1.3s infinite;
+}
+
+.final h1 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(50px, 9vw, 100px);
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ff82bd,
+            white,
+            #b990ff
+        );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+}
+
+.final h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(30px, 5vw, 55px);
+
+    margin-top: 20px;
+}
+
+.final p {
+
+    max-width: 700px;
+
+    color: #ccc;
+
+    line-height: 1.9;
+
+    margin:
+        25px auto;
+}
+
+
+/* =========================================================
+   SECRET BUTTON
+   ========================================================= */
+
+#secretButton {
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    margin-top: 35px;
+
+    transition:
+        opacity 1s;
+}
+
+#secretButton.show {
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   MUSIC
+   ========================================================= */
+
+.music-btn {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    background:
+        rgba(20,10,20,.75);
+
+    color: white;
+
+    cursor: pointer;
+
+    backdrop-filter:
+        blur(10px);
+
+    z-index: 5000;
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+   ========================================================= */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    pointer-events: none;
+
+    z-index: 3000;
+
+    animation:
+        floatHeart linear forwards;
+}
+
+@keyframes floatHeart {
+
+    to {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   CONFETTI
+   ========================================================= */
+
+.confetti {
+
+    position: fixed;
+
+    width: 8px;
+
+    height: 14px;
+
+    top: -20px;
+
+    z-index: 10000;
+
+    animation:
+        confettiFall 4s linear forwards;
+}
+
+@keyframes confettiFall {
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   STARS
+   ========================================================= */
+
+.star {
+
+    position: fixed;
+
+    width: 3px;
+
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    opacity: .5;
+
+    animation:
+        twinkle 3s infinite alternate;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+@keyframes twinkle {
+
+    from {
+        opacity: .1;
+    }
+
+    to {
+        opacity: .8;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width: 850px) {
+
+    .photo-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .reason-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .photo-card img {
+
+        height: 420px;
+    }
+}
+
+@media(max-width: 550px) {
+
+    section {
+
+        padding:
+            80px 5%;
+    }
+
+    .reason-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+
+        height: 350px;
+    }
+
+    .letter-card {
+
+        padding:
+            30px 22px;
+    }
+
+    .proposal-buttons {
+
+        gap: 15px;
+    }
+
+    .yes-btn {
+
+        padding:
+            15px 30px;
+    }
+
+    .no-btn {
+
+        padding:
+            13px 25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     SECRET INTRO
+     ========================================================= -->
+
+<div id="intro">
+
+    <div class="intro-content">
+
+        <div class="intro-small">
+            A LITTLE SURPRISE FOR YOU
+        </div>
+
+        <h1>
+            Chapter 20
+        </h1>
+
+        <h2>
+            For My Ammu ❤️
+        </h2>
+
+        <p>
+
+            Someone who loves you has prepared
+            a tiny universe of memories,
+            feelings and surprises...
+
+        </p>
+
+        <button
+            class="main-btn"
+            onclick="openSurprise()">
+
+            ✨ Open Your Surprise
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+
+<div id="main">
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="hero">
+
+    <div class="section-label">
+        20 YEARS • ONE BEAUTIFUL SOUL
+    </div>
+
+    <div class="hero-number">
+        20
+    </div>
+
+    <h2>
+        Welcome to Chapter 20, Paa ❤️
+    </h2>
+
+    <div class="tamil">
+
+        இனிய பிறந்தநாள் என்னவனே ❤️
+
+    </div>
+
+    <p>
+
+        Twenty years of your life...
+
+        Twenty years of dreams,
+        laughter, struggles,
+        achievements and memories.
+
+        And today, a new chapter begins.
+
+        I hope your Chapter 20 becomes
+        one of the most beautiful chapters
+        of your life.
+
+    </p>
+
+</section>
+
+
+
+<!-- =========================================================
+     PHOTOS
+     ========================================================= -->
+
+<section class="photos">
+
+    <div class="section-label">
+        OUR LITTLE UNIVERSE
+    </div>
+
+    <h2 class="section-title">
+        Just Us 📸
+    </h2>
+
+    <p class="section-subtitle">
+
+        Some pictures are just pictures.
+
+        But some pictures carry memories
+        that words can never completely explain.
+
+    </p>
+
+
+    <div class="photo-grid">
+
+
+        <!-- PHOTO 1 -->
+
+        <div class="photo-card">
+
+            <img
+                <img src="photo.png.jpeg" alt="Our special memory">
+
+
+            <div class="photo-caption">
+
+                A moment I want to keep forever ❤️
+
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 2 -->
+
+        <div class="photo-card">
+
+            <img
+                <img src="photo(1).png.jpeg" alt="Another special memory">
+
+            <div class="photo-caption">
+
+                One photograph...
+                countless feelings. ✨
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     20 REASONS
+     ========================================================= -->
+
+<section class="reasons-section">
+
+    <div class="section-label">
+        WHY I LOVE YOU
+    </div>
+
+    <h2 class="section-title">
+        20 Reasons ❤️
+    </h2>
+
+    <p class="section-subtitle">
+
+        I could write 100 reasons...
+
+        But because you are turning 20,
+        here are 20 of my favourites.
+
+    </p>
+
+
+    <div class="reason-grid">
+
+
+        <div class="reason">
+
+            <span class="reason-number">01</span>
+
+            <span class="reason-text">
+
+                Your smile can change
+                my entire mood.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">02</span>
+
+            <span class="reason-text">
+
+                You know exactly
+                how to make me laugh.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">03</span>
+
+            <span class="reason-text">
+
+                Your beautiful heart.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">04</span>
+
+            <span class="reason-text">
+
+                You make ordinary
+                moments special.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">05</span>
+
+            <span class="reason-text">
+
+                The way you care
+                about the people you love.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">06</span>
+
+            <span class="reason-text">
+
+                Your silly side
+                always makes me smile.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">07</span>
+
+            <span class="reason-text">
+
+                Your little habits
+                that I secretly love.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">08</span>
+
+            <span class="reason-text">
+
+                You make me feel
+                understood.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">09</span>
+
+            <span class="reason-text">
+
+                Your confidence
+                and the way you carry yourself.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">10</span>
+
+            <span class="reason-text">
+
+                Your sense of humour.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">11</span>
+
+            <span class="reason-text">
+
+                Your honesty.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">12</span>
+
+            <span class="reason-text">
+
+                Your dreams
+                and ambitions.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">13</span>
+
+            <span class="reason-text">
+
+                The way you make
+                even simple conversations special.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">14</span>
+
+            <span class="reason-text">
+
+                The way you
+                understand me.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">15</span>
+
+            <span class="reason-text">
+
+                Our memories together.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">16</span>
+
+            <span class="reason-text">
+
+                Your presence makes
+                difficult days feel lighter.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">17</span>
+
+            <span class="reason-text">
+
+                Your unique personality.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">18</span>
+
+            <span class="reason-text">
+
+                You bring happiness
+                into my days.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">19</span>
+
+            <span class="reason-text">
+
+                Every little memory
+                we have created.
+
+            </span>
+
+        </div>
+
+
+        <div class="reason">
+
+            <span class="reason-number">20</span>
+
+            <span class="reason-text">
+
+                Because there is nobody
+                quite like you. ❤️
+
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OUR STORY TIMELINE
+     ========================================================= -->
+
+<section class="timeline-section">
+
+    <div class="section-label">
+        OUR STORY
+    </div>
+
+    <h2 class="section-title">
+        How We Became Us 🕰️
+    </h2>
+
+    <p class="section-subtitle">
+
+        Some stories begin with a perfect moment.
+
+        Ours began in a much simpler way...
+
+    </p>
+
+
+    <div class="timeline">
+
+
+        <!-- FIRST MEMORY -->
+
+        <div class="memory">
+
+            <h3>
+                💬 The Beginning
+            </h3>
+
+            <p>
+
+                Our first memory...
+
+                We started chatting on WhatsApp.
+
+                And honestly?
+
+                I ignored you in the beginning. 😂
+
+                Little did I know that the person
+                I was ignoring would become
+                such an important part of my life.
+
+            </p>
+
+        </div>
+
+
+        <!-- PROPOSAL -->
+
+        <div class="memory">
+
+            <h3>
+                💍 30/12/2024 — Our Proposal Day
+            </h3>
+
+            <p>
+
+                30/12/2024...
+
+                A date that became special
+                in our story.
+
+                The day our feelings became
+                something more than just
+                conversations.
+
+                The day we chose each other. ❤️
+
+            </p>
+
+        </div>
+
+
+        <!-- TEMPLE -->
+
+        <div class="memory">
+
+            <h3>
+                🛕 Our First Temple Visit
+            </h3>
+
+            <p>
+
+                Our first temple visit
+                as life partners.
+
+                Standing together in a place
+                filled with peace and blessings
+                made that moment feel different.
+
+                It wasn't just a visit.
+
+                It became a memory
+                I will always carry.
+
+            </p>
+
+        </div>
+
+
+        <!-- FUNNIEST -->
+
+        <div class="memory">
+
+            <h3>
+                😂 Our Funniest Moment
+            </h3>
+
+            <p>
+
+                Evalo time sanda potalum...
+
+                veikkame illama...
+
+                thirupa namma pesuradhu. 😂❤️
+
+                No matter how many times
+                we fight, somehow we end up
+                talking again like nothing happened.
+
+                That is one of the funniest
+                and cutest things about us.
+
+            </p>
+
+        </div>
+
+
+        <!-- FIRST KISS -->
+
+        <div class="memory">
+
+            <h3>
+                💋 Our First Kiss
+            </h3>
+
+            <p>
+
+                One of those moments
+                that doesn't need a long explanation.
+
+                Our first kiss became
+                one of those memories
+                that will always have
+                a special place in my heart.
+
+            </p>
+
+        </div>
+
+
+        <!-- FIRST HUG -->
+
+        <div class="memory">
+
+            <h3>
+                🤍 Our First Hug
+            </h3>
+
+            <p>
+
+                Our first hug...
+
+                A simple moment,
+                but somehow it felt
+                like the world became
+                a little quieter.
+
+            </p>
+
+        </div>
+
+
+        <!-- INTERNSHIP -->
+
+        <div class="memory">
+
+            <h3>
+                💻 Our Internship Journey
+            </h3>
+
+            <p>
+
+                From work,
+                responsibilities,
+                random conversations
+                and all the little moments
+                in between...
+
+                Our internship journey
+                became another beautiful
+                chapter of our story.
+
+            </p>
+
+        </div>
+
+
+        <!-- NEVER FORGET -->
+
+        <div class="memory">
+
+            <h3>
+                🌙 A Memory I Will Never Forget
+            </h3>
+
+            <p>
+
+                Our first kiss.
+
+                Our first hug.
+
+                Our internship journey.
+
+                Our first temple visit.
+
+                Our silly fights.
+
+                Our endless conversations.
+
+                These aren't just memories.
+
+                They are little pieces
+                of our story that I never
+                want to forget.
+
+            </p>
+
+        </div>
+
+
+        <!-- TODAY -->
+
+        <div class="memory">
+
+            <h3>
+                ❤️ Today
+            </h3>
+
+            <p>
+
+                Today we celebrate you.
+
+                Twenty years of you.
+
+                And I'm secretly celebrating
+                the fact that our paths crossed.
+
+                Happy 20th birthday, Paa. ❤️
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROPOSAL SECTION
+     ========================================================= -->
+
+<section class="proposal">
+
+    <div class="proposal-heart">
+        💗
+    </div>
+
+    <div class="section-label">
+        ONE IMPORTANT QUESTION
+    </div>
+
+
+    <div class="proposal-date">
+
+        30 • 12 • 2024
+
+    </div>
+
+
+    <h2>
+        Thangoo...
+    </h2>
+
+
+    <p>
+
+        That date became one of the most
+        special dates in our story.
+
+        But today I want to ask you
+        something all over again...
+
+    </p>
+
+
+    <h2>
+        Will you choose me again? ❤️
+    </h2>
+
+
+    <div class="proposal-buttons">
+
+
+        <button
+            class="yes-btn"
+            onclick="acceptProposal()">
+
+            YES ❤️
+
+        </button>
+
+
+        <button
+            class="no-btn"
+            id="noButton">
+
+            NO 🙈
+
+        </button>
+
+
+    </div>
+
+
+    <div id="proposalMessage"></div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LOVE LETTER
+     ========================================================= -->
+
+<section class="letter-section">
+
+    <div class="section-label">
+        FROM MY HEART
+    </div>
+
+
+    <h2 class="section-title">
+        One Last Secret 💌
+    </h2>
+
+
+    <p class="section-subtitle">
+
+        Paa, click the letter...
+
+        There is something I really
+        want you to read.
+
+    </p>
+
+
+    <div
+        class="letter-card"
+        onclick="openLetter()">
+
+
+        <!-- CLOSED LETTER -->
+
+        <div
+            class="letter-cover"
+            id="letterCover">
+
+            <h3>
+                For My Paa ❤️
+            </h3>
+
+            <p>
+
+                💌 Tap to open your
+                birthday letter...
+
+            </p>
+
+        </div>
+
+
+        <!-- OPEN LETTER -->
+
+        <div
+            class="letter-content"
+            id="letterContent">
+
+
+            <h3>
+                Happy 20th Birthday, Thangoo ❤️
+            </h3>
+
+
+            
+
+            <br>
+
+
+            <p>
+
+                From that first WhatsApp
+                conversation where I
+                literally ignored you...
+
+                to 30/12/2024...
+
+                to our first temple visit
+                as life partners...
+
+                to our first hug...
+
+                our first kiss...
+
+                and our internship journey...
+
+                somehow all those little
+                moments became our story.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                We have fought.
+
+                We have laughed.
+
+                We have annoyed each other.
+
+                And somehow, after everything,
+                we still come back and talk
+                to each other.
+
+                Maybe that's one of the things
+                that makes our story ours.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                On your 20th birthday,
+                I wish you happiness,
+                success, peace,
+                beautiful adventures
+                and the courage to chase
+                every dream you have.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                I hope your 20s bring
+                you memories that make
+                you smile years from now.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                And I hope that somewhere
+                inside all those future memories,
+                there will still be little pieces
+                of us.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                You are one of the most
+                beautiful reasons I love my life.
+
+                ❤️
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                Happy Birthday,
+                my Thangoo.
+
+            </p>
+
+
+            <br>
+
+
+            <p>
+
+                With all my love,
+
+                <br><br>
+
+                ❤️ From the girl
+                who once ignored you
+                on WhatsApp...
+
+                and somehow ended up
+                loving you.
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL SURPRISE
+     ========================================================= -->
+
+<section
+    class="final"
+    id="finalSection">
+
+
+    <div class="final-heart">
+        ❤️
+    </div>
+
+
+    <div class="tamil">
+
+        இனிய பிறந்தநாள் என்னவனே ❤️
+
+    </div>
+
+
+    <h1>
+        Happy 20th Birthday!
+    </h1>
+
+
+    <h2>
+        My Ammu ❤️
+    </h2>
+
+
+    <p>
+
+        Here's to Chapter 20...
+
+        A chapter filled with dreams,
+        adventures, success,
+        laughter and beautiful memories.
+
+    </p>
+
+
+    <p>
+
+        And maybe...
+
+        many more chapters
+        for us to write together. ✨
+
+    </p>
+
+
+    <!-- HIDDEN SURPRISE -->
+
+    <button
+        class="main-btn"
+        id="secretButton"
+        onclick="secretSurprise()">
+
+        🎁 One More Secret
+
+    </button>
+
+
+    <br>
+
+
+    <button
+        class="main-btn"
+        onclick="replaySurprise()">
+
+        ↻ Replay From Beginning
+
+    </button>
+
+
+</section>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     OPTIONAL MUSIC
+     ========================================================= -->
+
+<audio
+    id="music"
+    loop>
+
+    <!--
+
+    OPTIONAL:
+
+    Put your music file in the same folder.
+
+    Example:
+
+    <source
+        src="birthday-song.mp3"
+        type="audio/mpeg">
+
+    -->
+
+</audio>
+
+
+<button
+    class="music-btn"
+    id="musicButton"
+    onclick="toggleMusic()">
+
+    🎵
+
+</button>
+
+
+
+<script>
+
+
+/* =========================================================
+   OPEN SURPRISE
+   ========================================================= */
+
+function openSurprise() {
+
+    document
+        .getElementById("intro")
+        .classList
+        .add("hide");
+
+
+    setTimeout(() => {
+
+        document
+            .getElementById("main")
+            .style.display =
+            "block";
+
+
+        createConfetti();
+
+        createStars();
+
+        startHearts();
+
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    }, 1000);
+
+}
+
+
+
+/* =========================================================
+   CONFETTI
+   ========================================================= */
+
+function createConfetti() {
+
+    for (
+        let i = 0;
+        i < 130;
+        i++
+    ) {
+
+        const confetti =
+            document.createElement("div");
+
+
+        confetti.className =
+            "confetti";
+
+
+        confetti.style.left =
+            Math.random() * 100 +
+            "vw";
+
+
+        confetti.style.background =
+            [
+
+                "#ff5da2",
+
+                "#ffb4d8",
+
+                "#b67aff",
+
+                "#ffffff",
+
+                "#ffdaea"
+
+            ][
+                Math.floor(
+                    Math.random() * 5
+                )
+            ];
+
+
+        confetti.style.animationDelay =
+            Math.random() * 2 +
+            "s";
+
+
+        document.body.appendChild(
+            confetti
+        );
+
+
+        setTimeout(() => {
+
+            confetti.remove();
+
+        }, 6000);
+
+    }
+
+}
+
+
+
+/* =========================================================
+   FLOATING HEARTS
+   ========================================================= */
+
+function startHearts() {
+
+    setInterval(() => {
+
+        const heart =
+            document.createElement("div");
+
+
+        heart.className =
+            "floating-heart";
+
+
+        heart.innerHTML =
+            [
+
+                "❤️",
+
+                "💗",
+
+                "💕",
+
+                "💖",
+
+                "✨"
+
+            ][
+                Math.floor(
+                    Math.random() * 5
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random() * 100 +
+            "vw";
+
+
+        heart.style.fontSize =
+            15 +
+            Math.random() * 25 +
+            "px";
+
+
+        heart.style.animationDuration =
+            5 +
+            Math.random() * 5 +
+            "s";
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(() => {
+
+            heart.remove();
+
+        }, 11000);
+
+
+    }, 700);
+
+}
+
+
+
+/* =========================================================
+   STARS
+   ========================================================= */
+
+function createStars() {
+
+    for (
+        let i = 0;
+        i < 80;
+        i++
+    ) {
+
+        const star =
+            document.createElement("div");
+
+
+        star.className =
+            "star";
+
+
+        star.style.left =
+            Math.random() * 100 +
+            "vw";
+
+
+        star.style.top =
+            Math.random() * 100 +
+            "vh";
+
+
+        star.style.animationDelay =
+            Math.random() * 3 +
+            "s";
+
+
+        document.body.appendChild(
+            star
+        );
+
+    }
+
+}
+
+
+
+/* =========================================================
+   20 REASONS SCROLL ANIMATION
+   ========================================================= */
+
+const reasons =
+    document.querySelectorAll(
+        ".reason"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(
+                (entry, index) => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        setTimeout(() => {
+
+                            entry
+                                .target
+                                .classList
+                                .add("visible");
+
+                        }, index * 70);
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold: .15
+        }
+
+    );
+
+
+reasons.forEach(reason => {
+
+    observer.observe(reason);
+
+});
+
+
+
+/* =========================================================
+   MOVING NO BUTTON
+   ========================================================= */
+
+const noButton =
+    document.getElementById(
+        "noButton"
+    );
+
+
+function moveNoButton() {
+
+    const maxX =
+        window.innerWidth < 600
+        ? 100
+        : 180;
+
+
+    const maxY =
+        window.innerWidth < 600
+        ? 100
+        : 130;
+
+
+    const x =
+        (Math.random() *
+            maxX * 2) -
+        maxX;
+
+
+    const y =
+        (Math.random() *
+            maxY * 2) -
+        maxY;
+
+
+    noButton.style.transform =
+        `translate(${x}px, ${y}px)`;
+
+}
+
+
+/*
+    Desktop:
+    The NO button moves when
+    the mouse comes near it.
+*/
+
+noButton.addEventListener(
+    "mouseenter",
+    moveNoButton
+);
+
+
+/*
+    Mobile:
+    The NO button moves when
+    the user tries to touch it.
+*/
+
+noButton.addEventListener(
+    "touchstart",
+    function(event) {
+
+        event.preventDefault();
+
+        moveNoButton();
+
+    }
+);
+
+
+
+/* =========================================================
+   YES BUTTON
+   ========================================================= */
+
+function acceptProposal() {
+
+    const message =
+        document.getElementById(
+            "proposalMessage"
+        );
+
+
+    message.innerHTML =
+
+        "I knew it... ❤️<br>" +
+
+        "My Thangoo chose me again. 🥹💗";
+
+
+    createConfetti();
+
+
+    for (
+        let i = 0;
+        i < 25;
+        i++
+    ) {
+
+        setTimeout(
+            createSpecialHeart,
+            i * 100
+        );
+
+    }
+
+}
+
+
+
+function createSpecialHeart() {
+
+    const heart =
+        document.createElement("div");
+
+
+    heart.className =
+        "floating-heart";
+
+
+    heart.innerHTML =
+        "❤️";
+
+
+    heart.style.left =
+        40 +
+        Math.random() * 20 +
+        "vw";
+
+
+    heart.style.fontSize =
+        25 +
+        Math.random() * 30 +
+        "px";
+
+
+    heart.style.animationDuration =
+        3 +
+        Math.random() * 2 +
+        "s";
+
+
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    }, 6000);
+
+}
+
+
+
+/* =========================================================
+   LOVE LETTER
+   ========================================================= */
+
+function openLetter() {
+
+    const content =
+        document.getElementById(
+            "letterContent"
+        );
+
+
+    const cover =
+        document.getElementById(
+            "letterCover"
+        );
+
+
+    content.classList.toggle(
+        "open"
+    );
+
+
+    if (
+        content.classList.contains(
+            "open"
+        )
+    ) {
+
+        cover.style.display =
+            "none";
+
+    } else {
+
+        cover.style.display =
+            "block";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   MUSIC
+   ========================================================= */
+
+const music =
+    document.getElementById(
+        "music"
+    );
+
+
+const musicButton =
+    document.getElementById(
+        "musicButton"
+    );
+
+
+function toggleMusic() {
+
+    if (!music.src) {
+
+        alert(
+
+            "Add your music file as " +
+            "birthday-song.mp3 " +
+            "in the same folder."
+
+        );
+
+        return;
+
+    }
+
+
+    if (music.paused) {
+
+        music.play();
+
+        musicButton.innerHTML =
+            "🔊";
+
+    } else {
+
+        music.pause();
+
+        musicButton.innerHTML =
+            "🎵";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   HIDDEN FINAL SURPRISE
+   ========================================================= */
+
+const finalSection =
+    document.getElementById(
+        "finalSection"
+    );
+
+
+const secretButton =
+    document.getElementById(
+        "secretButton"
+    );
+
+
+const finalObserver =
+    new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        setTimeout(() => {
+
+                            secretButton
+                                .classList
+                                .add("show");
+
+                        }, 2500);
+
+                    }
+
+                }
+            );
+
+        }
+
+    );
+
+
+finalObserver.observe(
+    finalSection
+);
+
+
+
+function secretSurprise() {
+
+    createConfetti();
+
+
+    alert(
+
+        "✨ One More Secret ✨\n\n" +
+
+        "If you reached this far...\n\n" +
+
+        "Just remember one thing:\n\n" +
+
+        "You are deeply loved. ❤️\n\n" +
+
+        "Happy 20th Birthday, Thangoo! 💗"
+
+    );
+
+}
+
+
+
+/* =========================================================
+   REPLAY
+   ========================================================= */
+
+function replaySurprise() {
+
+    document
+        .getElementById("intro")
+        .classList
+        .remove("hide");
+
+
+    document
+        .getElementById("main")
+        .style.display =
+        "none";
+
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "instant"
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```
